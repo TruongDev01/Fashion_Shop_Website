@@ -7,7 +7,7 @@ import Title from '../components/Title';
 import CartTotal from '../components/CartTotal';
 const Cart = () => {
 
-  const { products, currency, cartItems, updateQuantity, navigate} = useContext(ShopContext);
+  const { products, currency, cartItems, updateQuantity, navigate } = useContext(ShopContext);
 
   const [cartData, setCartData] = useState([]);
 
@@ -26,7 +26,7 @@ const Cart = () => {
       }
     }
     setCartData(tempData);
-  }, [cartItems]);
+  }, [cartItems, products]);
   return (
     <div className='border-t-2 pt-14'>
       <div className='text-2xl mb-3'>
@@ -35,6 +35,10 @@ const Cart = () => {
       <div className=''>
         {cartData.map((item, index) => {
           const productData = products.find((product) => product._id === item._id);
+          if (!productData) {
+            console.warn(`Product with ID ${item._id} not found in product list.`);
+            return null; // Bỏ qua mục này trong giỏ hàng
+          }
           return (
             <div key={index} className='py-4 border-t border-b border-gray-200 text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:rid-cols-[4fr_2fr_0.5fr] items-center gap-4'>
               <div className='flex item-start gap-6'>
@@ -62,7 +66,7 @@ const Cart = () => {
         <div className='w-full sm:w-[450px] '>
           <CartTotal />
           <div className='w-full text-end '>
-            <button onClick={()=>navigate('/place-order')} className='bg-black text-white text-sm my-8 px-8 py-3'>PROCEED TO CHECKOUT</button>
+            <button onClick={() => navigate('/place-order')} className='bg-black text-white text-sm my-8 px-8 py-3'>PROCEED TO CHECKOUT</button>
           </div>
         </div>
       </div>
