@@ -3,8 +3,6 @@ import Title from '../components/Title'
 import CartTotal from '../components/CartTotal'
 import { assets } from '../assets/assets'
 import { ShopContext } from '../context/ShopContext'
-import { data } from 'react-router-dom'
-import { headers } from 'next/headers'
 import { toast } from 'react-toastify'
 import axios from 'axios';
 const PlaceOrder = () => {
