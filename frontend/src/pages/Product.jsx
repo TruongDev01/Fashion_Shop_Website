@@ -83,8 +83,8 @@ const Product = () => {
           <p className='border border-gray-300 px-5 py-3 text-sm'>Reviews(122)</p>
         </div>
         <div className='flex flex-col gap-4 border border-gray-300 px-6 py-6 text-sm text-gray-500'>
-          <p className=''>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis tempus leo eu aenean.</p>
+          <p className=''>Experience the perfect blend of style and comfort with this premium piece. Crafted from high-quality materials, it features a modern fit that flatters every silhouette. Whether you are dressing up for a special occasion or keeping it casual, this versatile item is a must-have addition to your wardrobe.</p>
+          <p>Designed with attention to detail, this product ensures long-lasting durability without compromising on softness. Pair it with your favorite accessories to create a look that is uniquely yours.</p>
         </div>
       </div>
       {/* Display related products */}
